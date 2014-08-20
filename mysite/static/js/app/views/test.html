@@ -1,0 +1,158 @@
+<body>
+
+<div   class="container-fluid">
+    
+    <div class="row">
+    	
+        <div  id = "contColor"class="col-xs-3 ">
+            <table class="table table-hover table-centered">
+  				<thead> 
+  					<td style="width: 40%"><strong>Personal Information</strong></td>
+  					
+  				</thead>
+  				
+  				<tr>
+     			 	<td><strong>Username</strong></td>
+     				<td>{[{student.u_name}]}</td>
+  				</tr>
+  				<tr>
+     				<td><strong>First Name</strong></td>
+     				<td>{[{student.f_name}]}</td>
+  				</tr>
+  				<tr>
+     				<td><strong>Last Name</strong></td>
+     				<td>{[{student.l_name}]}</td>
+  				</tr>
+  				<tr>
+     				<td><strong>Email</strong></td>
+     				<td>{[{student.email}]}</td>
+  				</tr>
+  				
+			</table>
+        </div>	
+        
+       
+        <div  id = "contColor"class="col-xs-6 table-responsive column-scroll">
+            <table class="table table-hover table-centered">
+  				<thead> 
+  					<td><strong>Course Name</strong></td>
+  					<td colspan="3"><strong>Course Times</strong></td>
+  				</thead>
+  				
+  					
+  					<tbody >
+  						<div >
+          					<tr ng-repeat="post in posts"  ng-click="setSelected(this)" class={[{selected}]}>
+            				<td >{[{post.c_name}]}</td>
+            				<td ng-repeat="course in post.courses" >{[{course}]}</td>            			
+          					</tr>
+          				</div>
+        			</tbody>
+  					
+  				
+    				
+			</table>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+        </div>
+        
+        <div  id = "contColor"class="col-xs-3 column-scroll">
+            <table class="table table-hover table-condensed table-centered span12">
+  				<thead> 
+  					<td style="width: 35%"><strong>Course Description</strong></td>
+  					
+  				</thead>
+  				<tr>
+     				<td >About:</td>
+     				<td>{[{course_description}]}</td>
+  				</tr>	
+			</table>
+        </div>
+        
+        
+        
+    </div>
+    <hr>
+        <div class="row">
+    	
+        
+        <div  id = "contColor"class="col-xs-6 column-scroll ">
+          <div  class="col-xs-3 ">
+            <div class="btn-group-vertical buttongroup-centered ">
+  				<button type="button" ng-repeat="day in Days" ng-click="setButtonSelected(this)" class={[{button_selected}]} >{[{day}]}</button>
+			</div>
+            
+		 </div>
+		 
+		 <div  class="col-xs-9 ">
+            <table class="table table-hover table-centered" ui-on-Drop="onDrop($event,$data,formatStudent)">
+  				<caption>Available Buddies</caption>
+  				<thead> 
+  						<td style="width: 25%"><strong> Username</strong></td>
+  					    <td style="width: 20%"><strong> First Name</strong></td>
+  					    <td style="width: 20%"><strong> Last Name</strong></td>
+  						<td style="width: 38%"><strong> Email</strong></td>	
+  				</thead>
+  				<tr   ui-draggable="true" drag="buddy" 
+						on-drop-success="dropSuccessHandler(this,$event,formatStudent)"
+						ng-repeat="buddy in formatStudent | filter:chosenDay" >
+  					 
+     					<td>{[{buddy.u_name}]}</td>
+     					<td>{[{buddy.f_name}]}</td>
+     					<td>{[{buddy.l_name}]}</td>
+     					<td>{[{buddy.email}]}</td>
+     				
+  				</tr>
+  				
+  				
+			</table>
+		 </div>
+		 
+        </div>
+        
+        <div  id = "contColor"class="col-xs-6 column-scroll ">
+         	
+			<table class="table table-hover table-centered " ui-on-Drop="onDrop($event,$data,favoriteStudent)">
+				<caption>Favorite Buddy</caption>
+  				<thead> 
+  						<td style="width: 20%"><strong> Username</strong></td>
+  					    <td style="width: 20%"><strong> First Name</strong></td>
+  					    <td style="width: 20%"><strong> Last Name</strong></td>
+  						<td style="width: 40%"><strong> Email</strong></td>	
+  				</thead>
+  				<tr ui-draggable="true" drag="buddyFav" 
+						on-drop-success="dropSuccessHandler(this, $event,favoriteStudent)"
+						ng-repeat="buddyFav in favoriteStudent  ">
+					<td >
+     				{[{buddyFav.u_name}]}
+					</td>
+					<td >
+     				{[{buddyFav.f_name}]}
+					</td>
+					<td >
+     				{[{buddyFav.l_name}]}
+					</td>
+					<td >
+     				{[{buddyFav.email}]}
+					</td>
+  				</tr>
+  			
+  				
+			</table>
+			
+        </div>
+     
+        
+        
+    </div>
+    
+      <hr> 
+</div>
+</body>

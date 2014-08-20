@@ -1,0 +1,53 @@
+.table-centered
+{
+    width:100%; 
+    margin-top:5%;
+    margin-right:15%;
+        
+}
+
+.buttongroup-centered
+{
+    
+    margin-top:5%;
+    
+    position:fixed;
+ 	 
+}
+table th, table td { overflow: hidden;word-wrap:break-word; }
+table{ table-layout:fixed;}
+
+.column-scroll {  
+    
+    overflow: scroll;
+}
+
+body {
+   background:#0B610B !important;
+}
+
+#contColor {
+	margin-top:1%;	
+	background: white;
+	border: 2px solid;
+    border-radius: 25px;
+    position:relative;
+ 	height:300px;
+       
+   
+}
+
+
+
+
+
+.selected li {
+  background-color: red !important;
+}
+
+
+
+
+
+
+
