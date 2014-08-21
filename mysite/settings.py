@@ -58,7 +58,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',    
     'django.middleware.locale.LocaleMiddleware',    
     'django.middleware.clickjacking.XFrameOptionsMiddleware', 
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',       
+         
 )
 
 #variables for registration
