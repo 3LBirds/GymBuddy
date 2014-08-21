@@ -16,11 +16,13 @@ a.  To view admin site: localhost:8000/admin
 b.  To view APIs: localhost:8000/budfinder, or localhost:8000/budfinder/student
 c.  To view App: localhost:8000/#/<num>. Where num represents the 'id' attribute of a record in the database.
 
-2. Tables are scrollable, and Available Buddies and Favorite Buddies containers have drag and drop capabilities. It's
+2. Tables are scrollable, when their contents surpasses the size of the container. 
+3. Available Buddies and Favorite Buddies containers have drag and drop capabilities. It's
    still work in progress, but the trick is to drag the element until it hovers over the header row or another record 
    in the table. 
 3. Select a course to see the description in the Course Description container. 
-4. Selecting a day in the 'Available Buddies' container allows the current 'student' to see which other students also are available on the selected day.  
+4. Selecting a day in the 'Available Buddies' container allows the current 'student' to see which other students also are available on the selected day. 
+ 
 
 Thanks to tutorials like:
 1. Django tutorials  
