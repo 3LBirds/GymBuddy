@@ -20,6 +20,7 @@ c.  To view App: localhost:8000/#/<num>. Where num represents the 'id' attribute
    still work in progress, but the trick is to drag the element until it hovers over the header row or another record 
    in the table. 
 3. Select a course to see the description in the Course Description container. 
+4. Selecting a day in the 'Available Buddies' container allows the current 'student' to see which other students also are available on the selected day.  
 
 Thanks to tutorials like:
 1. Django tutorials  
